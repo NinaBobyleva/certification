@@ -22,3 +22,7 @@ export const Title = styled.h1`
     font-size: 60px;
     color: black;
 `;
+
+export const SubTitle = styled.p`
+    color: #000
+`;

@@ -6,10 +6,10 @@ export const Input = styled.input`
   outline: none;
   padding: 20px;
   border-radius: 30px;
-  ::placeholder {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 3px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 3px;
+  ::placeholder { 
     color: #94a6be;
   }
 `;
