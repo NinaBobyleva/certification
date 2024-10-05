@@ -1,11 +1,13 @@
-import './App.css'
-import { AppRoutes } from './AppRoutes'
+import { AppRoutes } from "./AppRoutes.tsx";
+import { GlobalStyle } from "./globalStyle.styled.ts";
 
 function App() {
-
   return (
-    <AppRoutes />
-  )
+    <>
+      <GlobalStyle />
+      <AppRoutes />
+    </>
+  );
 }
 
-export default App
+export default App;
