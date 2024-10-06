@@ -13,15 +13,14 @@ export function HomePage() {
   const [users, setUsers] = useState<UserType[]>([]);
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [sort, setSort] = useState<string>("");
-  console.log("currentPage", currentPage);
-  console.log("user", users);
+  const [sort, setSort] = useState<string>('По возрастанию');
+  console.log("sort", sort);
   const [userName, setUserName] = useState<string>("");
 
   useEffect(() => {
     const getDataUser = async () => {
       setIsLoading(true);
-      const res = await getUserInfo(userName, perPage, currentPage);
+      const res = await getUserInfo(userName, perPage, currentPage, sort);
       setCount(res.total_count);
       setUsers(res.items);
       setIsLoading(false);
@@ -34,7 +33,7 @@ export function HomePage() {
     if (userName === "") {
       setUsers([]);
     }
-  }, [userName, currentPage]);
+  }, [userName, currentPage, sort]);
 
   return (
     <S.Container>

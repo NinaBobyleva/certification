@@ -36,6 +36,7 @@ export const SortBlock = styled.div`
 export const SortBox = styled.div`
   display: flex;
   gap: 15px;
+  align-items: center;
 `;
 
 export const SortBoxText = styled.span`

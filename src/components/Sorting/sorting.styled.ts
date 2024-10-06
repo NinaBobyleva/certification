@@ -2,18 +2,16 @@ import styled from "styled-components";
 
 export const SortingBox = styled.div``;
 
-export const SortingForm = styled.form``;
-
-export const FormSelect = styled.select`
+export const SortingForm = styled.form`
   width: 160px;
-  height: 25px;
+  height: 30px;
+  border: 1px solid lightgrey;
   border-radius: 20px;
   outline: none;
-  padding-left: 6px;
-  padding-right: 6px;
-  background-color: #FAFAFA;
+  text-align: center;
+  padding: 4px 0px;
+  background-color: lightgrey;
+  cursor: pointer;
 `;
 
-export const FormOption = styled.option`
-
-`;
+export const FormInput = styled.span``;

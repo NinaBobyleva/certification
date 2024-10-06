@@ -13,12 +13,12 @@ export function UserList({ login, url, id, isLoading }: UserListProp) {
     <S.UserListBox>
       <S.UserBox>
         {isLoading ? (
-          <SkeletonBrick height={30} width={30} />
+          <SkeletonBrick height={200} width={200} />
         ) : (
           <S.Img src={url} alt="avatar" />
         )}
         {isLoading ? (
-          <SkeletonText rows={1} fontSize="l" lineHeight="l" />
+          <SkeletonText rows={1} fontSize="2xl" lineHeight="l" />
         ) : (
           <S.UserLogin>{login}</S.UserLogin>
         )}

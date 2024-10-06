@@ -9,6 +9,7 @@ export const FilterBox = styled.div`
   padding-bottom: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
 `;
 
@@ -23,8 +24,7 @@ export const FilterPageList = styled.li<StyledProps>`
   border: 1px solid ${props => props.$highlighted ? 'lightgrey' : '#FAFAFA'};
   border-radius: 30px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 3px 0px;
   cursor: pointer;
   background-color: ${props => props.$highlighted ? 'lightgrey' : '#FAFAFA'};
 `;
