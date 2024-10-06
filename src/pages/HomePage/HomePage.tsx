@@ -10,36 +10,38 @@ import { Sorting } from "../../components/Sorting/Sorting.tsx";
 export function HomePage() {
   const [isLoading, setIsLoading] = useState(false);
   const [count, setCount] = useState<number | null>(null);
+  // console.log("count", count);
   const [users, setUsers] = useState<UserType[]>([]);
+  console.log("users", users);
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [sort, setSort] = useState<string>('По возрастанию');
-  console.log("sort", sort);
-  const [userName, setUserName] = useState<string>("");
+  const [sort, setSort] = useState<string>("По возрастанию");
+  // console.log("currentPage", currentPage);
+  const [login, setLogin] = useState<string>("");
 
   useEffect(() => {
     const getDataUser = async () => {
       setIsLoading(true);
-      const res = await getUserInfo(userName, perPage, currentPage, sort);
+      const res = await getUserInfo(login, perPage, currentPage, sort);
       setCount(res.total_count);
       setUsers(res.items);
       setIsLoading(false);
     };
 
-    if (userName) {
+    if (login) {
       getDataUser();
     }
 
-    if (userName === "") {
-      setUsers([]);
-    }
-  }, [userName, currentPage, sort]);
+    // if (userName === "") {
+    //   setUsers([]);
+    // }
+  }, [login, currentPage, sort]);
 
   return (
     <S.Container>
       <S.SearchBlock>
         <S.Title>Поиск пользователей на Git Hub</S.Title>
-        <Search setUserName={setUserName} />
+        <Search setLogin={setLogin} />
       </S.SearchBlock>
       <S.UserBlock>
         {count ? (

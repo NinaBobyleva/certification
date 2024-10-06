@@ -28,9 +28,7 @@ export function Filter({
       {currentPage > 1 ? (
         <Button
           title="Предыдущая"
-          onClick={() => {
-            setCurrentPage((prev) => prev - 1);
-          }}
+          onClick={() => setCurrentPage(currentPage - 1)}
         />
       ) : null}
       <S.FilterList>
@@ -46,9 +44,7 @@ export function Filter({
       </S.FilterList>
       <Button
         title="Следующая"
-        onClick={() => {
-          setCurrentPage(currentPage + 1);
-        }}
+        onClick={() => setCurrentPage(currentPage + 1)}
       />
     </S.FilterBox>
   );
