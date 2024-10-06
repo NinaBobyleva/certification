@@ -1,7 +1,7 @@
 import * as S from "./button.styled.ts"
 
-export function Button() {
+export function Button({title, onClick}: {title: string, onClick: () => void}) {
     return(
-        <S.Button>Поиск</S.Button>
+        <S.Button onChange={onClick}>{title}</S.Button>
     );
 }
