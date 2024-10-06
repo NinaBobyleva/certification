@@ -4,7 +4,6 @@ import * as S from "./filter.styled";
 
 type FilterBlockProp = {
   count: number;
-  pagesCount: number;
   perPage: number;
   currentPage: number;
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
@@ -19,7 +18,6 @@ export function Filter({
   let pages: number[] = [];
 
   const pagesCount = Math.ceil(count / perPage);
-  // console.log("pagesCount", pagesCount);
 
   createPages({ pages, pagesCount, currentPage });
 

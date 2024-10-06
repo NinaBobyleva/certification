@@ -31,10 +31,6 @@ export function HomePage() {
     if (login) {
       getDataUser();
     }
-
-    // if (userName === "") {
-    //   setUsers([]);
-    // }
   }, [login, currentPage, sort]);
 
   return (
@@ -65,7 +61,6 @@ export function HomePage() {
       </S.UserBlock>
       {count ? (
         <Filter
-          pagesCount={count}
           perPage={perPage}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Компонент Button Успешный рендер Button 1`] = `
+<div
+  className="sc-gtLWhw bgSXdt"
+>
+  <ul
+    className="sc-egkSDF eexUqU"
+  >
+    <li
+      className="sc-fAUdSK kQWOkT"
+      onClick={[Function]}
+    >
+      1
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      2
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      3
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      4
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      5
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      6
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      7
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      8
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      9
+    </li>
+    <li
+      className="sc-fAUdSK hmzUPb"
+      onClick={[Function]}
+    >
+      10
+    </li>
+  </ul>
+  <button
+    className="sc-blHHSb flYjWY"
+    onClick={[Function]}
+  >
+    Следующая
+  </button>
+</div>
+`;
