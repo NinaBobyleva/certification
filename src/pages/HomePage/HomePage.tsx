@@ -6,6 +6,7 @@ import { getUsers } from "../../api/userInfo.ts";
 import { UserType } from "../../type.ts";
 import { Filter } from "../../components/Filter/Filter.tsx";
 import { Sorting } from "../../components/Sorting/Sorting.tsx";
+import { getErrorText } from "../../utils/getErrorText.ts";
 
 export function HomePage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,6 +21,7 @@ export function HomePage() {
   useEffect(() => {
     const getDataUser = async () => {
       setIsLoading(true);
+      setError("");
       getUsers(login, perPage, currentPage, sort)
         .then((res) => {
           setCount(res.total_count);
@@ -27,9 +29,8 @@ export function HomePage() {
           setIsLoading(false);
         })
         .catch((error) => {
-          if (error.message === "Request failed with status code 403") {
-            setError("Лимит запросов превышен, попробуйте позже");
-          }
+          error &&
+            getErrorText({ errorName: error.message, setError: setError });
         });
     };
 
@@ -41,7 +42,7 @@ export function HomePage() {
   return (
     <S.Container>
       <S.SearchBlock>
-        <S.Title>Пользователи Git Hub</S.Title>
+        <S.SearchTitle>Пользователи Git Hub</S.SearchTitle>
         <Search setLogin={setLogin} />
       </S.SearchBlock>
       {error ? (
@@ -51,7 +52,7 @@ export function HomePage() {
           <S.UserBlock>
             {count ? (
               <S.SortBlock>
-                <S.SubTitle>Всего найдено: {count}</S.SubTitle>
+                <S.SortBoxText>Всего найдено: {count}</S.SortBoxText>
                 <S.SortBox>
                   <S.SortBoxText>Сoртировать по: </S.SortBoxText>
                   <Sorting sort={sort} setSort={setSort} />

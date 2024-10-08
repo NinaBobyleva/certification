@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 import { Search } from "./Search";
 
-describe("Компонент Button", () => {
-  it("Успешный рендер Button", () => {
+describe("Компонент Search", () => {
+  it("Успешный рендер компонента Search", () => {
     const setLogin = jest.fn();
     const component = renderer
       .create(<Search setLogin={setLogin}/>)

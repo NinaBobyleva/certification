@@ -17,7 +17,7 @@ export const SearchBlock = styled.div`
   margin-top: 240px;
 `;
 
-export const Title = styled.h1`
+export const SearchTitle = styled.h1`
   font-weight: 700;
   font-size: 60px;
   color: black;
@@ -40,12 +40,6 @@ export const SortBox = styled.div`
 `;
 
 export const SortBoxText = styled.span`
-  font-weight: 400;
-  font-size: 14px;
-  color: #000;
-`;
-
-export const SubTitle = styled.p`
   font-weight: 400;
   font-size: 14px;
   color: #000;

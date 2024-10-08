@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const SortingBox = styled.div``;
-
 export const SortingForm = styled.form`
   width: 160px;
   height: 30px;
@@ -14,7 +12,7 @@ export const SortingForm = styled.form`
   cursor: pointer;
 `;
 
-export const FormInput = styled.span`
+export const SortingFormInput = styled.span`
   font-weight: 400;
   font-size: 14px;
   color: #000;

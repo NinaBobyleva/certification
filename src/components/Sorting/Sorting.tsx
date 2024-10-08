@@ -16,10 +16,8 @@ export function Sorting({ sort, setSort }: SortingProp) {
   };
 
   return (
-    <S.SortingBox>
-      <S.SortingForm>
-        <S.FormInput onClick={toggleSort}>{sort}</S.FormInput>
-      </S.SortingForm>
-    </S.SortingBox>
+    <S.SortingForm>
+      <S.SortingFormInput onClick={toggleSort}>{sort}</S.SortingFormInput>
+    </S.SortingForm>
   );
 }
