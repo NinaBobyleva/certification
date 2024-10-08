@@ -2,6 +2,12 @@ import axios from "axios";
 
 const token = import.meta.env.VITE_TOKEN;
 
+const config = {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+};
+
 export async function getUsers(
   login: string,
   perPage: number,
@@ -18,12 +24,6 @@ export async function getUsers(
     sortResult = "&sort=repositories&order=desc";
   }
 
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
-
   const response = await axios.get(
     `https://api.github.com/search/users?q=${login}+&page=${currentPage}${sortResult}&per_page=${perPage}`,
     config
@@ -33,7 +33,9 @@ export async function getUsers(
 }
 
 export async function getUserInfo(login: string) {
-  const response = await axios.get(`https://api.github.com/users/${login}`);
+  const response = await axios.get(`https://api.github.com/users/${login}`,
+    config
+  );
 
   return response.data;
 }
