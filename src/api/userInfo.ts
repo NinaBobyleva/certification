@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const token = import.meta.env.VITE_TOKEN;
+// const token = import.meta.env.VITE_TOKEN;
 
-const config = {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-};
+// const config = {
+//   headers: {
+//     Authorization: `Bearer ${token}`,
+//   },
+// };
 
 export async function getUsers(
   login: string,
