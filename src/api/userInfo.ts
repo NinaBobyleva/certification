@@ -25,7 +25,7 @@ export async function getUsers(
   }
 
   const response = await axios.get(
-    `https://api.github.com/search/users?q=${login}+in:login+type:user&page=${currentPage}${sortResult}&per_page=${perPage}`,
+    `https://api.github.com/search/users?q=${login}&page=${currentPage}${sortResult}&per_page=${perPage}`,
     config
   );
 
