@@ -25,8 +25,8 @@ export async function getUsers(
   }
 
   const response = await axios.get(
-    `https://api.github.com/search/users?q=${login}+&page=${currentPage}${sortResult}&per_page=${perPage}`,
-    // config
+    `https://api.github.com/search/users?q=${login}+in:login+type:user&page=${currentPage}${sortResult}&per_page=${perPage}`,
+    config
   );
 
   return response.data;
@@ -34,7 +34,7 @@ export async function getUsers(
 
 export async function getUserInfo(login: string) {
   const response = await axios.get(`https://api.github.com/users/${login}`,
-    // config
+    config
   );
 
   return response.data;
