@@ -17,10 +17,10 @@ export type UserCardType = {
 //   total_count: number | null;
 // };
 
-// export type InfoDataType = {
-//   total_count: number;
-//   items: Items[];
-// };
+export type DataType = {
+  total_count: number;
+  items: UserType[];
+};
 
 // export type Items = {
 //   id: string;

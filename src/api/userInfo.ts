@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function getUsersInfo(
+export async function getUsers(
   login: string,
   perPage: number,
   currentPage: number,
@@ -23,7 +23,7 @@ export async function getUsersInfo(
   return response.data;
 }
 
-export async function getUser(login: string) {
+export async function getUserInfo(login: string) {
   const response = await axios.get(
     `https://api.github.com/users/${login}`
   );

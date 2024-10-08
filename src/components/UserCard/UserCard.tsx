@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../../api/userInfo";
+import { getUserInfo } from "../../api/userInfo";
 import * as S from "./userCard.styled";
 import { UserCardType } from "../../type";
 
@@ -8,7 +8,7 @@ export function UserCard({ login }: { login: string }) {
 
   useEffect(() => {
     const getDataUser = async () => {
-      const res = await getUser(login);
+      const res = await getUserInfo(login);
       setUser(res);
     };
 

@@ -50,3 +50,11 @@ export const SubTitle = styled.p`
   font-size: 14px;
   color: #000;
 `;
+
+export const Error = styled.p`
+  font-weight: 600;
+  font-size: 24px;
+  color: red;
+  text-align: center;
+  padding-top: 70px;
+`;
