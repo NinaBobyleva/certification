@@ -2,11 +2,15 @@ import axios from "axios";
 
 const token = import.meta.env.VITE_TOKEN;
 
-const config = {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-};
+let config = {};
+
+if (token) {
+  config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+}
 
 export async function getUsers(
   login: string,
@@ -33,7 +37,8 @@ export async function getUsers(
 }
 
 export async function getUserInfo(login: string) {
-  const response = await axios.get(`https://api.github.com/users/${login}`,
+  const response = await axios.get(
+    `https://api.github.com/users/${login}`,
     config
   );
 
