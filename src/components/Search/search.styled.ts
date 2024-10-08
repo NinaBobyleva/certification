@@ -9,7 +9,7 @@ export const Input = styled.input`
   font-weight: 400;
   font-size: 24px;
   line-height: 3px;
-  ::placeholder { 
+  ::placeholder {
     color: #94a6be;
   }
 `;

@@ -41,7 +41,7 @@ export function HomePage() {
           <S.SortBlock>
             <S.SubTitle>Всего найдено: {count}</S.SubTitle>
             <S.SortBox>
-              <span>Сoртировать по: </span>
+              <S.SortBoxText>Сoртировать по: </S.SortBoxText>
               <Sorting sort={sort} setSort={setSort} />
             </S.SortBox>
           </S.SortBlock>

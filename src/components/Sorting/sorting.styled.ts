@@ -14,4 +14,8 @@ export const SortingForm = styled.form`
   cursor: pointer;
 `;
 
-export const FormInput = styled.span``;
+export const FormInput = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+`;

@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
 import { getUser } from "../../api/userInfo";
 import * as S from "./userCard.styled";
-
-type UserCard = {
-  created_at: string;
-  followers: number;
-  following: number;
-  public_repos: number;
-};
+import { UserCardType } from "../../type";
 
 export function UserCard({ login }: { login: string }) {
-  const [user, setUser] = useState<UserCard>();
+  const [user, setUser] = useState<UserCardType | null>(null);
 
   useEffect(() => {
     const getDataUser = async () => {
@@ -29,13 +23,11 @@ export function UserCard({ login }: { login: string }) {
   }
 
   return (
-    <S.UserCard>
-      <S.UserCardBox>
-        <S.UserCardText>Создан: {createDate}</S.UserCardText>
-        <S.UserCardText>Подписчики: {user?.followers}</S.UserCardText>
-        <S.UserCardText>Подписан: {user?.following}</S.UserCardText>
-        <S.UserCardText>Кол-во репозиториев: {user?.public_repos}</S.UserCardText>
-      </S.UserCardBox>
-    </S.UserCard>
+    <S.UserCardBox>
+      <S.UserCardText>Создан: {createDate}</S.UserCardText>
+      <S.UserCardText>Подписчики: {user?.followers}</S.UserCardText>
+      <S.UserCardText>Подписан: {user?.following}</S.UserCardText>
+      <S.UserCardText>Кол-во репозиториев: {user?.public_repos}</S.UserCardText>
+    </S.UserCardBox>
   );
 }

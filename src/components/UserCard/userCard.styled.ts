@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-export const UserCard = styled.section``;
 export const UserCardBox = styled.div`
   display: flex;
   align-items: center;
@@ -8,7 +7,7 @@ export const UserCardBox = styled.div`
   padding: 50px 30px;
 `;
 export const UserCardText = styled.p`
-    font-weight: 600;
-    font-size: 20px;
-    color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
 `;

@@ -33,7 +33,7 @@ export function UserList({ login, url, gitUrl, isLoading }: UserListProp) {
           )}
         </S.UserListBoxLogin>
         <S.UserListBoxLink>
-        <S.UserLink to={gitUrl}>ссылка на Git Hub</S.UserLink>
+          <S.UserLink to={gitUrl}>Ссылка на Git Hub</S.UserLink>
         </S.UserListBoxLink>
       </S.UserListBox>
       {isOpen ? <UserCard login={login} /> : null}
