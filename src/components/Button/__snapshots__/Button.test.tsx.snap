@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Компонент Button Успешный рендер Button 1`] = `
+<button
+  className="sc-blHHSb flYjWY"
+  onClick={[MockFunction]}
+>
+  Следующий
+</button>
+`;

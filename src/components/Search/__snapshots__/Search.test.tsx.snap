@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Компонент Button Успешный рендер Button 1`] = `
+<input
+  className="sc-blHHSb flDCzU"
+  onChange={[Function]}
+  placeholder="Введите логин пользователя"
+  type="text"
+/>
+`;

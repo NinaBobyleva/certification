@@ -1,11 +1,14 @@
 import { AppRoutes } from "./AppRoutes.tsx";
 import { GlobalStyle } from "./globalStyle.styled.ts";
+import { Theme, presetGpnDefault } from "@consta/uikit/Theme";
 
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <AppRoutes />
+      <Theme preset={presetGpnDefault}>
+        <GlobalStyle />
+        <AppRoutes />
+      </Theme>
     </>
   );
 }
