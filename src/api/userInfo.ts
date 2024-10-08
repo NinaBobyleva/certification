@@ -8,7 +8,6 @@ const config = {
   },
 };
 
-
 export async function getUsers(
   login: string,
   perPage: number,
