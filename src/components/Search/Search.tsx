@@ -8,7 +8,7 @@ export function Search({
 }) {
   const debounceSearch = debounce((e: React.ChangeEvent<HTMLInputElement>) => {
     setLogin(e.target.value);
-  }, 1000);
+  }, 400);
 
   return (
     <S.Input
