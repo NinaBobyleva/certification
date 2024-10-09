@@ -1,6 +1,6 @@
 Тестовое задание для прохождения аттестации
 
-## Ссылка на приложение: (https://ninabobyleva.github.io/certification/)
+## Ссылка на приложение: (https://certification2024.netlify.app/)
 
 ## Установка
 
