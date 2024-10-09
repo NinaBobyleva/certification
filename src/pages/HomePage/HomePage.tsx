@@ -29,8 +29,10 @@ export function HomePage() {
           setIsLoading(false);
         })
         .catch((error) => {
-          error &&
+          if (error) {
             getErrorText({ errorName: error.message, setError: setError });
+          }
+            
         });
     };
 

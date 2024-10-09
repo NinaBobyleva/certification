@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const token = import.meta.env.VITE_TOKEN;
+const token = import.meta.env.VITE_APP_TOKEN;
 
 let config = {};
 
@@ -10,6 +10,8 @@ if (token) {
       Authorization: `Bearer ${token}`,
     },
   };
+} else {
+  config = {};
 }
 
 export async function getUsers(

@@ -6,7 +6,6 @@ const config: Config = {
 
   moduleNameMapper: {
     "^@/components/(.*)$": "<rootDir>/components/$1",
-    // "^/public/img/(.*)$": "<rootDir>/public/img/$1",
   },
   transform: {
     "^.+\\.(svg)$": "<rootDir>/node_modules/jest-transform-stub",

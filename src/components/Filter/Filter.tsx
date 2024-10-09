@@ -15,7 +15,7 @@ export function Filter({
   count,
   setCurrentPage,
 }: FilterBlockProp) {
-  let pages: number[] = [];
+  const pages: number[] = [];
 
   const pagesCount = Math.ceil(count / perPage);
 
