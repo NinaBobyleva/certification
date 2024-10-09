@@ -1,4 +1,4 @@
-import renderer from "react-test-renderer";
+import * as renderer from "react-test-renderer";
 import { Search } from "./Search";
 
 describe("Компонент Search", () => {

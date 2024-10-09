@@ -3,7 +3,7 @@ import { Search } from "../../components/Search/Search.tsx";
 import { UserList } from "../../components/UserList/UserList.tsx";
 import * as S from "./homePage.styled.ts";
 import { getUsers } from "../../api/userInfo.ts";
-import { UserType } from "../../type.ts";
+import { InfoDataType, UserType } from "../../type.ts";
 import { Filter } from "../../components/Filter/Filter.tsx";
 import { Sorting } from "../../components/Sorting/Sorting.tsx";
 import { getErrorText } from "../../utils/getErrorText.ts";
@@ -23,13 +23,13 @@ export function HomePage() {
       setIsLoading(true);
       setError("");
       getUsers(login, perPage, currentPage, sort)
-        .then((res) => {
+        .then((res: InfoDataType) => {
           setCount(res.total_count);
           setUsers(res.items);
           setIsLoading(false);
         })
-        .catch((error) => {
-          if (error) {
+        .catch((error: unknown) => {
+          if (error instanceof Error) {
             getErrorText({ errorName: error.message, setError: setError });
           }
             

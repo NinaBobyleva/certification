@@ -1,3 +1,8 @@
+export type InfoDataType = {
+  total_count: number;
+  items: UserType[];
+};
+
 export type UserType = {
   id: string;
   html_url: string;

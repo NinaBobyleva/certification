@@ -1,4 +1,4 @@
-import renderer from "react-test-renderer";
+import * as renderer from "react-test-renderer";
 import { Filter } from "./Filter";
 
 describe("Компонент Filter", () => {
